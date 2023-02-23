@@ -15,19 +15,19 @@ What is docker?
     * Running pipelines on cloud (AWS batch, Kubernetes jobs)
     * Spark - can specify dependencies we need for our data pipeline in spark with docker
     * serverless (AWS lambda)
-    
+
 * Docker image
-    * Snapshot of your container 
+    * Snapshot of your container
     * Has all the instructions needed to setup particular env
-    * Can take your docker image and run it in a different env (e.g. AWS or Google Cloud) 
+    * Can take your docker image and run it in a different env (e.g. AWS or Google Cloud)
     * Enables 100% reproducibility b/c initial image and image used in cloud env are identical
-    
+
 * Dockerfile
     * file containing set of instructions for Docker to execute upon a building an image
-    
+
 Docker commands
-* docker run -it ubuntu bash 
-    * “run” runs docker image 
+* docker run -it ubuntu bash
+    * “run” runs docker image
     * “-it" means interactive
     * Ubuntu is the linux distro (name of image you want to run)
     * Bash - shell command we want to execute in this image, provides bash prompt to execute commands
