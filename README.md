@@ -3,7 +3,7 @@
 * [Introduction to Docker](#de-zoomcamp---introduction-to-docker)
 * [Introduction to Postgres](#de-zoomcamp---introduction-to-postgres)
 
-### Docker
+#### Docker
 
 Docker is
 
