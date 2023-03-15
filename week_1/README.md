@@ -1,4 +1,5 @@
 DOCKER 
+
 What is docker?
 *  “Delivers software in the form of containers”. “Containers are isolated from one another”. Containers are independent execution environments that contain everything application needs: OS, system libraries, packages, etc.
 * Docker image
