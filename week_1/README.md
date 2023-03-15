@@ -47,9 +47,9 @@ POSTGRES
 *  Running Postgres with docker
     * docker run -it -e POSTGRES_USER="root" -e POSTGRES_PASSWORD="root" -e POSTGRES_DB="ny_taxi" -v ny_taxi_postgres_data:/var/lib/postgresql/data -p 5432:5432 postgres:13
 
-        *NOTE
-    *  CLEAR ALL DOCKER CONTAINERS/VOLUMES/IMAGES, delete host folder, re-create host folder, change host folder permissions to read/write sudo chmod a+rwx <folder name>
-    * Only specify folder name in volume param of docker run:  -v <folder_name>:/var/lib/postgresql/data
+    *NOTE
+      * CLEAR ALL DOCKER CONTAINERS/VOLUMES/IMAGES, delete host folder, re-create host folder, change host folder permissions to read/write sudo chmod a+rwx <folder name>
+      * Only specify folder name in volume param of docker run:  -v <folder_name>:/var/lib/postgresql/data
 *  “-e” refers to env vars - way of configuring whatever we have in docker container
     *     What user will be, what password for user will be
 * -v refer to volumes  - map folder  in our host filesystem to folder in container — since Postgres is a db, it needs to keep files in filesystem, this is also known as mounting
