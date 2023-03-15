@@ -3,7 +3,7 @@ locals {
 }
 
 variable "project" {
-  description = "dtc-de-380020"
+  description = "Your GCP Project ID"
 }
 
 variable "region" {
