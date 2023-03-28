@@ -42,15 +42,15 @@ def clean(df = pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-@task()
-def write_from_github_to_gcs(df:pd.DataFrame, color:str, dataset_file:str):
+# @task()
+# def write_from_github_to_gcs(df:pd.DataFrame, color:str, dataset_file:str):
 
-    github_block = GitHub.load("zoomcamp-github")
-    print('dir github block', dir(github_block))
-    print('copying github directory...')
-    github_block.get_directory()
+#     github_block = GitHub.load("zoomcamp-github")
+#     print('dir github block', dir(github_block))
+#     print('copying github directory...')
+#     github_block.get_directory()
 
-    return
+#     return
 
 
 @task()
@@ -90,9 +90,9 @@ def etl_web_to_gcs(month: int,
     # grab data and set to df
     df = fetch(dataset_url)
     df_clean = clean(df)
-    write_from_github_to_gcs(df_clean, color, dataset_file)
-    # path = write_local(df_clean, color, dataset_file)
-    # write_gcs(path)
+    # write_from_github_to_gcs(df_clean, color, dataset_file)
+    path = write_local(df_clean, color, dataset_file)
+    write_gcs(path)
 
 
 # going to trigger this flow maybe x times for x months
