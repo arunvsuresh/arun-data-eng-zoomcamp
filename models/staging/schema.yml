@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: dtc-de-380020
+    schema: nytaxi
+
+    tables:
+      - name: green
+      - name: yellow
+      - name: fhv
