@@ -193,3 +193,23 @@ models:
             description: Total amount of all tolls paid in trip.
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
+
+    - name: stg_fhv_tripdata
+      columns:
+          - name: dispatching_base_num				
+          - name: pickup_datetime					
+          - name: dropOff_datetime					
+          - name: pickup_locationid
+            tests:
+                - relationships:
+                    to: ref('taxi_zone_lookup')
+                    field: locationid
+                    severity: warn					
+          - name: dropoff_locationid
+            tests:
+                - relationships:
+                    to: ref('taxi_zone_lookup')
+                    field: locationid
+                    severity: warn					
+          - name: SR_Flag					
+          - name: Affiliated_base_number
