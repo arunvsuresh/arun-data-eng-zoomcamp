@@ -59,7 +59,8 @@ def extract_and_transform_from_web(service_type):
 
 
 def parse_web_url(service_type, year, months, base_url):
-     for month in months:
+    total_start = timer()
+    for month in months:
         start = timer()
         dataset_file = f"{service_type}_tripdata_{year}-{month:02}.csv.gz"
 
@@ -104,6 +105,9 @@ def parse_web_url(service_type, year, months, base_url):
 
         os.system(f"rm {dataset_file}")
         print(f'removed parquet file: {dataset_file}\n')
+    total_end = timer()
+    print(f'took {(total_end - total_start) / 60} minute(s) to parse and upload all data files\n')
+
 
 
 if __name__ == '__main__':
